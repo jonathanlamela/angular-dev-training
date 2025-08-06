@@ -1,4 +1,4 @@
-import { Component, computed, OnInit, signal } from '@angular/core';
+import { Component, computed, OnInit, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-clock',
@@ -8,7 +8,7 @@ import { Component, computed, OnInit, signal } from '@angular/core';
 })
 export class Clock implements OnInit {
 
-  currentTime = signal(new Date());
+  currentTime: WritableSignal<Date> = signal(new Date());
   currentHour = computed(() => {
     const hours = this.currentTime().getHours();
     return hours < 10 ? `0${hours}` : hours.toString();

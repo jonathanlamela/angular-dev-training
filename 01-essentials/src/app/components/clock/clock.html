@@ -1,2 +1,9 @@
-<h1>Current clock</h1>
-<h2>{{ title() }}</h2>
+<h1 class="text-2xl font-bold">Current clock</h1>
+<span class="countdown font-mono text-2xl">
+  <span [style.--value]="currentHour()" aria-live="polite">{{ currentHour() }}</span>
+  h
+  <span [style.--value]="currentMinute()" aria-live="polite">{{ currentMinute() }}</span>
+  m
+  <span [style.--value]="currentSecond()" aria-live="polite">{{ currentSecond() }}</span>
+  s
+</span>

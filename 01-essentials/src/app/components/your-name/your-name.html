@@ -1,6 +1,8 @@
 <h1 class="text-2xl font-bold">Your name component</h1>
 <input class="input" [value]="name()" type="text" (input)="setName($event)" placeholder="Enter your name" />
 @if(name() != ''){
-<p>Your name is: {{ name() }}</p>
-<p>Uppercase name {{ uppercaseName() }}</p>
+<div class="mt-4">
+  <p>Your name is: {{ name() }}</p>
+  <p>Uppercase name {{ uppercaseName() }}</p>
+</div>
 }

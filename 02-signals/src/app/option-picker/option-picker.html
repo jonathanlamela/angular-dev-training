@@ -1,0 +1,7 @@
+<b>Active city: {{ selectedOption().name }}</b>
+<ul>
+  @for(city of optionsAvailable(); track city.id) {
+  <li>{{ city.name }} <button (click)="pickCity(city.id)">Set as active</button><button
+      (click)="deleteCity(city.id)">Delete city</button></li>
+  }
+</ul>

@@ -1,0 +1,7 @@
+<p [ngClass]="{ 'text-red': isRed() }" [ngStyle]="currentStyles">Testo di prova</p>
+<button (click)="toggleRed()">Toggle Red Text</button>
+<button (click)="toggleBold()">Toggle Bold Text</button>
+
+<p appMakeItalic>Testo italico</p>
+
+<router-outlet />
